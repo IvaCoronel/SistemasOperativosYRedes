@@ -33,5 +33,5 @@ Por último, en variables globales utilicé un flag (bandera) que regula y contr
 
 A continuación observaremos el pseudocódigo completo:
 
-![](/funciones VP.jpg)
+![](/pseudocodigo.jpg)
 
