@@ -35,5 +35,42 @@ A continuación observaremos el pseudocódigo completo:
 
 ![](/pseudocodigo.jpg)
 
+Otras funciones que forman parte del programa son: 
 
+* **ejecutarReceta()**
+* **imprimirAccion()**
+* **ganador()**
+
+![](/otrasFunciones.jpg)
+
+En ejecutar receta, cada equipo crea 8 hilos que ejecutan las distintas acciones. Estas acciones son leídas desde un archivo .txt llamado "receta.txt",
+que contiene cada accion a realizar con sus respectivos ingredientes.
+Mediante un **_for** y un **_fgets** obtenemos las líneas del archivo, esas lineas son separadas por la funcion **_strtok** y pasadas al **_struct parámetro**.
+
+```
+//Recorro el archivo con la receta y distribuyo los parámetros.
+	FILE * archivo;
+	archivo = fopen("receta.txt","r");
+	int indiceIngredientes= 0;
+	char separador[]=",";
+	int largo=9;
+	char linea[100];
+	for (int i=0;i<largo;i++){
+		fgets(linea,100,(FILE*) archivo);
+		char *palabra= strtok(linea ,separador);	 
+		strcpy(pthread_data->pasos_param[i].accion,palabra);
+		while(palabra != NULL){
+			if (indiceIngredientes==0){
+				palabra=strtok(NULL,separador);
+				indiceIngredientes++;
+			}
+			else{ 
+				strcpy(pthread_data->pasos_param[i].ingredientes[indiceIngredientes-1],palabra); 
+				palabra=strtok(NULL,separador);
+				indiceIngredientes++;
+			}
+		}	
+		indiceIngredientes=0;
+	}
+```
 
