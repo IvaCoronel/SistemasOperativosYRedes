@@ -35,3 +35,5 @@ A continuación observaremos el pseudocódigo completo:
 
 ![](/pseudocodigo.jpg)
 
+
+
