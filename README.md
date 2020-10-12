@@ -18,4 +18,5 @@ el primero en realizar la receta completa gana.
 El primer paso para realizar cualquier proyecto es pensar cómo hacerlo, qué funciones se van a necesitar, qué variables y
 en este caso, cuántos semáforos y de qué tipo serán. Para ello implementé lo siguiente: 
 
+![](/declaraciones.jpg)
 
