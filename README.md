@@ -43,9 +43,9 @@ Otras funciones que forman parte del programa son:
 
 ![](/otrasFunciones.jpg)
 
-En ejecutar receta, cada equipo crea 8 hilos que ejecutan las distintas acciones. Estas acciones son leídas desde un archivo .txt llamado "receta.txt",
+En **ejecutarReceta()**, cada equipo crea 8 hilos que ejecutan las distintas acciones. Estas acciones son leídas desde un archivo .txt llamado "receta.txt",
 que contiene cada accion a realizar con sus respectivos ingredientes.
-Mediante un **_for** y un **_fgets** obtenemos las líneas del archivo, esas lineas son separadas por la funcion **_strtok** y pasadas al **_struct parámetro**.
+Mediante un **_for_** y un **_fgets_** obtenemos las líneas del archivo, esas lineas son separadas por la funcion **_strtok_** y pasadas al **_struct parámetro_**.
 
 ```
 //Recorro el archivo con la receta y distribuyo los parámetros.
@@ -73,4 +73,12 @@ Mediante un **_for** y un **_fgets** obtenemos las líneas del archivo, esas lin
 		indiceIngredientes=0;
 	}
 ```
+
+La función **imprimirAccion()** además de imprimir por consola las acciones, los ingredientes y los equipos que las estan ejecutando, guarda esa salida  en un archivo.txt llamado "salida.txt". Cada equipo, accion, ingrediente es concatenado a una línea y guardado en el archivo. Las funciones que se utilizan son **_fputs()_** y **_strcat()_**.
+
+La última función es **ganador()** y ésta es encargada de imprimir por consola y guardar en el archivo txt el ganador de la competencia.
+Es llamada desde la función **armarHamburguesa()** y funciona con una bandera declarada en el main (**int flag**), la cual comienza encendida y cuando llega el primer equipo se apaga.
+
+
+
 
