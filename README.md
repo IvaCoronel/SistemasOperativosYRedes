@@ -79,6 +79,10 @@ La función **imprimirAccion()** además de imprimir por consola las acciones, l
 La última función es **ganador()** y ésta es encargada de imprimir por consola y guardar en el archivo txt el ganador de la competencia.
 Es llamada desde la función **armarHamburguesa()** y funciona con una bandera declarada en el main (**int flag**), la cual comienza encendida y cuando llega el primer equipo se apaga.
 
+## Prueba de escritorio 
+
+![](/prueba.jpg)
+
 
 
 
